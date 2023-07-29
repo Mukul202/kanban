@@ -33,6 +33,6 @@ export async function POST(request: Request) {
     return NextResponse.json({});
   } catch (error) {
     console.error("Error occurred:", error);
-    return NextResponse.error("An error occurred while processing the request.");
+    return NextResponse.error();
   }
 }
