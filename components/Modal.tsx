@@ -2,7 +2,7 @@
 
 import {FormEvent, Fragment, useRef } from 'react'
 
-import {Dialog,Transition} from "@headlessui/react";
+const {Dialog,Transition} =await import("@headlessui/react")
   
 
 import { useModalStore } from '@/store/ModalStore';

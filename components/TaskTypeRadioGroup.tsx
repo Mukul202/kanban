@@ -1,7 +1,7 @@
 "use client";
 
 import { useBoardStore } from "@/store/BoardStore";
-import { RadioGroup } from "@headlessui/react";
+const { RadioGroup }=await import("@headlessui/react")
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 const types=[
