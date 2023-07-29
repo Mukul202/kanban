@@ -22,14 +22,14 @@ const fetchSuggestion = async (board: Board) => {
     const todos = formatTodosForAI(board);
     console.log('Formatted todos:', todos);
 
-    const res = await axios.post('/api/generateSummary', { todos });
+    // const res = await axios.post('/api/generateSummary', { todos });
 
-    const { data } = res;
-    const { content } = data;
+    // const { data } = res;
+    // const { content } = data;
 
-    console.log('Response from API:', content);
+    // console.log('Response from API:', content);
 
-    return content;
+    return 'Summarising...';
   } catch (error) {
     console.error('Error occurred:', error);
     return 'An error occurred while fetching the suggestion.';
