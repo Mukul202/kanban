@@ -9,7 +9,7 @@ export const getTodosGroupedByColumn = async () => {
 
     console.log(todos);
 
-    const columns=todos.reduce((acc: { get: (arg0: any) => any; set: (arg0: any, arg1: { id: any; todos: never[]; }) => void; },todo: { status: any; $id: any; $createdAt: any; Title: any; image: string; }) => {
+    const columns:Map<TypedColumn,Column>=todos.reduce((acc: { get: (arg0: any) => any; set: (arg0: any, arg1: { id: any; todos: never[]; }) => void; },todo: { status: any; $id: any; $createdAt: any; Title: any; image: string; }) => {
         if(!acc.get(todo.status)){
             acc.set(todo.status,{
                 id:todo.status,
@@ -40,9 +40,10 @@ export const getTodosGroupedByColumn = async () => {
 
     console.log(columns);
 
-    const sortedColumns:Map<TypedColumn,Column> = new Map(
+    const sortedColumns = new Map<TypedColumn, Column>(
         Array.from(columns.entries()).sort(
-          (a, b) => columnTypes.indexOf(a[0]) - columnTypes.indexOf(b[0]))
+          (a, b) => columnTypes.indexOf(a[0]) - columnTypes.indexOf(b[0])
+        )
       );
       
 
