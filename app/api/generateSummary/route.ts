@@ -1,6 +1,6 @@
 
 // import openai from "@/openai";
-import { NextResponse } from "next/server";
+// import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
@@ -30,9 +30,9 @@ export async function POST(request: Request) {
     // console.log("Data is", data);
     // console.log(data.choices[0].message);
     // return NextResponse.json(data.choices[0].message);
-    return NextResponse.json({});
+    // return NextResponse.json({});
   } catch (error) {
     console.error("Error occurred:", error);
-    return NextResponse.error();
+    // return NextResponse.error();
   }
 }
